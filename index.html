@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CPU Scheduler Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+canvas {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+        #chart {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .bar {
+            height: 60px;
+            border-radius: 8px;
+            margin: 5px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        .bar:hover {
+            transform: scale(1.1);
+        }
+
+        #timeline {
+            margin-top: 10px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 70%;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CPU Scheduling Visualization</h1>
+
+<h3>Gantt Chart</h3>
+<div id="chart"></div>
+<div id="timeline"></div>
+
+<h3>Waiting Time Graph</h3>
+<div class="card">
+    <canvas id="graph" width="600" height="300"></canvas>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
